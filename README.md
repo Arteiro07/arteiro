@@ -2,7 +2,13 @@ A React Next Tailwind Typescript React Three fiber personal website.
 
 https://arteiro.vercel.app/
 
-- [ ] Boilerplate and setup
+If you want to run locally feel free to clone and
+
+npm install
+
+npm run dev
+
+- [ x ] Boilerplate and setup
 
 - [ ] Basic 3d scene
 
