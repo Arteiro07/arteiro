@@ -1,7 +1,13 @@
+import Footer from "./Footer";
+import Logo from "./Logo";
+import Scene from "./Scene";
+
 export default function Home() {
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-between p-24">
-			dsadsadsa
+		<main className="min-h-screen m-0">
+			<Logo />
+			<Footer />
+			<Scene />
 		</main>
 	);
 }

@@ -1,4 +1,7 @@
-A React Next Tailwind Typescript React Three fiber personal website.
+A React Next Tailwind Typescript React Three fiber personal website. At the
+begining it's going to be a heavely inspired design by https://gapsystudio.com/
+but as time goes on I will intend to deviate from the original and add my
+flavours.
 
 https://arteiro.vercel.app/
 
@@ -10,9 +13,15 @@ npm run dev
 
 - [ x ] Boilerplate and setup
 
-- [ ] Basic 3d scene
+- [ x ] Basic 3d scene
 
-- [ ] Basic 3d space for the website
+- [ x ] Basic 3d space for the website
+
+- [ ] Basic camera movement and placement
+
+- [ ] Room materials
+
+- [ ] Room ligthing
 
 - [ ] Scalable 3d space
 
