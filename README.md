@@ -1,5 +1,7 @@
 A React Next Tailwind Typescript React Three fiber personal website.
 
+https://arteiro.vercel.app/
+
 - [ ] Boilerplate and setup
 
 - [ ] Basic 3d scene
