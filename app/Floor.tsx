@@ -1,15 +1,21 @@
+import { DEPTH } from "@/utils/constants";
+import { useCustomTexture } from "@/utils/useCustomTexture";
 import { Plane } from "@react-three/drei";
-
-const DEPTH = 20;
 
 type FloorProps = {
 	length: number;
 };
 
 export default function Floor(props: FloorProps) {
+	const groundTexture = useCustomTexture({
+		x: 1,
+		y: 5,
+		name: "/ground/wood_floor",
+		rotation: Math.PI / 2,
+	});
 	return (
 		<Plane rotation-x={-Math.PI / 2} args={[props.length, DEPTH]} receiveShadow>
-			<meshStandardMaterial attach="material" color="white" />
+			<meshStandardMaterial {...groundTexture} />
 		</Plane>
 	);
 }

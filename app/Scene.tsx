@@ -1,5 +1,5 @@
 "use client";
-import { OrbitControls } from "@react-three/drei";
+import { CAMERASTART, HEIGHT } from "@/utils/constants";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useState } from "react";
 import Floor from "./Floor";
@@ -19,10 +19,10 @@ export default function Scene() {
 	return (
 		<div className=" absolute  h-full w-full p-0 m-0">
 			<Suspense fallback={<SuspenseFallback />}>
-				<Canvas>
-					<ambientLight intensity={5} />
-					<pointLight position={[10, 10, 10]} />
-					<OrbitControls />
+				<Canvas camera={CAMERASTART}>
+					<ambientLight intensity={0.5} />
+					<pointLight intensity={1000} position={[0, HEIGHT, 0]} />
+					{/* <OrbitControls /> */}
 					<Wall length={length} />
 					<Floor length={length} />
 					<Roof length={length} />

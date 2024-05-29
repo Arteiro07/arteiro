@@ -17,11 +17,11 @@ npm run dev
 
 - [ x ] Basic 3d space for the website
 
-- [ ] Basic camera movement and placement
-
-- [ ] Room materials
+- [ x ] Room materials
 
 - [ ] Room ligthing
+
+- [ ] Basic camera movement and placement
 
 - [ ] Scalable 3d space
 

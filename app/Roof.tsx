@@ -1,18 +1,24 @@
-import { Plane } from "@react-three/drei";
+import { DEPTH, HEIGHT, SKY_LIGHT_DISTANCE } from "@/utils/constants";
 
-const HEIGHT = 30;
 type RoofProps = {
 	length: number;
 };
+
 export default function Roof(props: RoofProps) {
-	return (
-		<Plane
-			position={[0, HEIGHT, 0]}
-			rotation-x={Math.PI / 2}
-			args={[props.length, 30]}
-			receiveShadow
-		>
-			<meshStandardMaterial attach="material" color="white" />
-		</Plane>
-	);
+	const roof: JSX.Element[] = [];
+
+	for (let i = 0; i * SKY_LIGHT_DISTANCE < props.length; i = i + 1) {
+		roof.push(
+			<mesh
+				key={i}
+				position={[i * SKY_LIGHT_DISTANCE - props.length / 2, HEIGHT, 0]} // Adjust position as needed
+				rotation-x={Math.PI / 2} // Adjust args as needed
+				receiveShadow
+			>
+				<boxGeometry args={[SKY_LIGHT_DISTANCE / 2, DEPTH]} />
+				<meshStandardMaterial attach="material" color="hotpink" />
+			</mesh>
+		);
+	}
+	return <>{roof}</>;
 }
