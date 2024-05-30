@@ -1,4 +1,4 @@
-import { DEPTH, HEIGHT, SKY_LIGHT_DISTANCE } from "@/utils/constants";
+import { DEPTH, HEIGHT, SKYLIGHT, SKY_LIGHT_DISTANCE } from "@/utils/constants";
 import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import {
@@ -36,7 +36,7 @@ export default function Roof(props: RoofProps) {
 						HEIGHT,
 						0,
 					]}
-					color="yellow"
+					color={SKYLIGHT}
 				/>
 			</>
 		);
