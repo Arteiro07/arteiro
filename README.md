@@ -19,9 +19,15 @@ npm run dev
 
 - [ x ] Room materials
 
-- [ ] Room ligthing
+- [ x ] Room ligthing
 
-- [ ] Basic camera movement and placement
+- [ x ] Keyboard camera movement
+
+- [ ] Button camera movement
+
+- [ ] Scroll camera movement
+
+- [ ] Clamp camera movement
 
 - [ ] Scalable 3d space
 

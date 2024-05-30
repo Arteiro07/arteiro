@@ -1,7 +1,9 @@
 "use client";
-import { CAMERASTART } from "@/utils/constants";
-import { Canvas } from "@react-three/fiber";
+import { CAMERASTART, SPEED } from "@/utils/constants";
+import { useKeyboard } from "@/utils/useMovement";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { Suspense, useState } from "react";
+import * as THREE from "three";
 import Floor from "./Floor";
 import Roof from "./Roof";
 import SuspenseFallback from "./SuspenseFallback";
@@ -21,6 +23,7 @@ export default function Scene() {
 			<Suspense fallback={<SuspenseFallback />}>
 				<Canvas camera={CAMERASTART}>
 					<ambientLight intensity={0.5} />
+					<Camera />
 					{/* <OrbitControls /> */}
 					<Wall length={length} />
 					<Floor length={length} />
@@ -32,4 +35,28 @@ export default function Scene() {
 			</Suspense>
 		</div>
 	);
+}
+
+export function Camera() {
+	const { moveRight, moveLeft } = useKeyboard();
+	const [cameraPosition, setCameraPosition] = useState<THREE.Vector3>(
+		CAMERASTART.position
+	);
+
+	useFrame((state, delta) => {
+		if (moveLeft && moveRight) {
+		} else if (moveLeft) {
+			let a = state.camera.position;
+			a.x = a.x - 1;
+			setCameraPosition(a);
+		} else if (moveRight) {
+			let a = state.camera.position;
+			a.x = a.x + 1;
+			setCameraPosition(a);
+		} else {
+		}
+		state.camera.position.lerp(cameraPosition, delta * SPEED);
+	});
+
+	return <></>;
 }
