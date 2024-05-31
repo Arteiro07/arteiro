@@ -1,5 +1,5 @@
+import { useCustomTexture } from "@/hooks/useCustomTexture";
 import { DEPTH, HEIGHT } from "@/utils/constants";
-import { useCustomTexture } from "@/utils/useCustomTexture";
 import { Plane } from "@react-three/drei";
 
 type WallProps = {

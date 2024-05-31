@@ -1,5 +1,5 @@
+import { useCustomTexture } from "@/hooks/useCustomTexture";
 import { DEPTH } from "@/utils/constants";
-import { useCustomTexture } from "@/utils/useCustomTexture";
 import { Plane } from "@react-three/drei";
 
 type FloorProps = {
@@ -9,7 +9,7 @@ type FloorProps = {
 export default function Floor(props: FloorProps) {
 	const groundTexture = useCustomTexture({
 		x: 1,
-		y: 5,
+		y: 6,
 		name: "/ground/wood_floor",
 		rotation: Math.PI / 2,
 	});

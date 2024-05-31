@@ -25,6 +25,8 @@ npm run dev
 
 - [ ] Button camera movement
 
+- [ ] Drag movement
+
 - [ ] Scroll camera movement
 
 - [ ] Clamp camera movement
