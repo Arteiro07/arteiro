@@ -10,10 +10,8 @@ export default function useKeyboardMovement() {
 		CAMERASTART.position
 	);
 
-	// const scroll = useScroll();
-	// console.log(scroll);
-
 	useFrame((state, delta) => {
+		console.log("sdadsa");
 		if (moveLeft && moveRight) {
 		} else if (moveLeft) {
 			let a = state.camera.position;

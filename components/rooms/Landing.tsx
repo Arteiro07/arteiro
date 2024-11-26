@@ -1,5 +1,4 @@
 import { DEPTH, HEIGHT, LENGTH } from "@/utils/constants";
-import { Html } from "@react-three/drei";
 import { CornerPlant } from "../CornerPlant";
 import Floor from "../Floor";
 import Frame from "../Frame";
@@ -36,7 +35,6 @@ export default function Landing(props: LandingProps) {
 				size={[20, 0.5, 20]}
 			/>
 			<Neon position={[15, 18, -DEPTH / 2 + 1]} scale={0.27} />
-			<Html position={[36, 16.5, -DEPTH / 2]}> SCROLL DRAG ARROWS </Html>
 			<CornerPlant
 				scale-y={6}
 				scale-x={5}
